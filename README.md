@@ -15,7 +15,8 @@
     
     https://public.tableau.com/authoring/SpaceMissionVisualizations/MissionForecasted#1
     
-    https://public.tableau.com/authoring/SpaceMissionVisualizations/SpaceMissionVisualizations#1
+    https://public.tableau.com/views/SpaceMissionVisualizations/SpaceMissionVisualizations?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link![image](https://github.com/user-attachments/assets/6e5c569d-ade6-4a13-af9d-708b9f8cd80c)
+
 
 The first image, launch data, showcases the global mission data over the years. Data is spread from 1957 to 2022. The bar chart shows the total count of missions per year.  In green, it shows the number of successful missions, while in red, it shows the number of failed missions. Partial failure is in orange, and pre-launch failure is in yellow. When looking at the graph, you can see that the late 60’s to late 70’s had a spike, and the 2020s had the next spike. 
 
