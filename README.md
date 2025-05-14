@@ -1,33 +1,101 @@
-# Project-4
+# 🚀 Project 4: Forecasting the Future of Space & Building a Rocket Knowledge Assistant
+
+## 👩‍💻 About the Project
+
+This capstone project explores two complementary applications of data science in the context of space exploration:
+
+1. **Time Series Forecasting**: Using Facebook Prophet, we predicted future NASA space missions through the year 2050 based on historical launch trends.
+2. **Rocket Knowledge Assistant**: An AI-powered chatbot that answers natural-language questions about rockets and space missions by combining SQL database queries with OpenAI’s GPT model.
+
+Together, these components showcase how machine learning and AI can make complex data more accessible, predictive, and engaging.
+
+---
+
+## 📈 Forecasting Future Space Missions
+
+We analyzed historical launch data (1957–2022) and used the Prophet model to forecast mission trends through 2050.
+
+### 🔧 Tools Used
+- Python (Pandas, Prophet, Matplotlib)
+- Tableau (for final visualization)
+
+### ✅ Model Results
+- **MAE**: ~11–15 missions/year
+- **RMSE**: 13–20
+- **MAPE**: 22–28%
+- **R² Score**: 0.836
+
+### 📊 Visualizations (Tableau Dashboards)
+
+All visualizations are hosted in Tableau. Use the links below to explore:
+
+1. **[Launch Activity by Year](https://public.tableau.com/authoring/SpaceMissionVisualizations/LaunchActivity#1)**  
+   Displays global mission counts by year, segmented by success, failure, partial failure, and pre-launch failure.  
+   🔹 *Key Insight*: Spikes in the late 1960s–70s and again in the 2020s reflect key eras of activity.
+
+2. **[Company Launch Performances](https://public.tableau.com/authoring/SpaceMissionVisualizations/CompanyLaunchPerformances#1)**  
+   Horizontal bar chart showing missions per agency/company, color-coded by outcome.  
+   🔹 *Key Insight*: Russia/USSR has the highest total launch count.
+
+3. **[Rocket Reliability Metrics](https://public.tableau.com/authoring/SpaceMissionVisualizations/RocketReliability#1)**  
+   Compares mission frequency of active vs. retired rockets.  
+   🔹 *Key Insight*: Cosmos-3M had the most missions historically; Falcon 9 leads among active rockets.
+
+4. **[Mission Forecast (2050)](https://public.tableau.com/authoring/SpaceMissionVisualizations/MissionForecasted#1)**  
+   Time series projection using Prophet, with predicted intervals through 2050.  
+   🔹 *Key Insight*: The model forecasts ~394 missions in 2050 (range: 316–470).
+
+5. **[Combined Dashboard Overview](https://public.tableau.com/views/SpaceMissionVisualizations/SpaceMissionVisualizations?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**  
+   Integrates all visualizations into one interactive dashboard for easy navigation.
+
+---
+
+## 🤖 Rocket Knowledge Assistant
+
+The Rocket Knowledge Assistant is a chatbot that answers questions about space missions, rockets, and launches. It intelligently routes queries to a database or to OpenAI’s GPT API depending on question complexity.
+
+### 🔧 Tools Used
+- Python (Flask)
+- SQLite (Mission Database)
+- OpenAI API
+- Optional: LangChain (for orchestration)
+
+### 💬 How It Works
+1. User asks a question (e.g., “Which rocket launched the most missions?”)
+2. The system detects intent and chooses between a SQL lookup or AI-generated response
+3. The chatbot responds with a clear, conversational answer
+
+### 🌍 Why It Matters
+- Makes space knowledge accessible to everyone
+- Great for students, space enthusiasts, and general users
+- Demonstrates how AI + structured data can work together
+
+---
+
+## 🗂 Project Structure
+
+```
+Project-4/
+├── FINAL_PROJECT/                 # Chatbot app, database, EDA, and visuals
+│   ├── app/                       # Flask app and routing logic
+│   ├── database/                  # SQLite DB with mission data
+│   ├── notebooks/                # Data prep and model logic
+│   └── reports/                  # Final presentation slides and Tableau links
+│
+├── Prophet_Space_Forecast/       # Time series forecasting component
+│   ├── notebooks/                # Forecasting with Prophet
+│   ├── data/                     # Historical and projected datasets
+│   └── outputs/                  # Forecast results
+```
 
 
+---
 
+## 👥 Team
 
-## Mission Data – Visualizations (Avenika)
-
-### All visualizations are in Tableau. Follow the links to access the visualizations.
-
-    https://public.tableau.com/authoring/SpaceMissionVisualizations/LaunchActivity#1
-    
-    https://public.tableau.com/authoring/SpaceMissionVisualizations/CompanyLaunchPerformances#1
-    
-    https://public.tableau.com/authoring/SpaceMissionVisualizations/RocketReliability#1
-    
-    https://public.tableau.com/authoring/SpaceMissionVisualizations/MissionForecasted#1
-    
-    https://public.tableau.com/views/SpaceMissionVisualizations/SpaceMissionVisualizations?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link![image](https://github.com/user-attachments/assets/6e5c569d-ade6-4a13-af9d-708b9f8cd80c)
-
-
-The first image, launch data, showcases the global mission data over the years. Data is spread from 1957 to 2022. The bar chart shows the total count of missions per year.  In green, it shows the number of successful missions, while in red, it shows the number of failed missions. Partial failure is in orange, and pre-launch failure is in yellow. When looking at the graph, you can see that the late 60’s to late 70’s had a spike, and the 2020s had the next spike. 
-
-
-The second horizontal bar chart shows each company’s launch performance. It shows the total number of missions that were carried out by each company/country. Same as the previous graph, in green it shows the successful launches by each company/country, while red shows the number of failed missions. Orange shows the partial failures, and yellow shows the pre-launch failures. When looking at this graph, it clearly shows that Russia or the USSR is leading with a clear margin. 
-
-
-The third graph focuses on rocket reliability. This graph shows all the rockets that have launched a mission. In green, you can see active rockets as of 2022, with the number of missions each rocket has launched. In orange, you can see the rockets that have been retired. Cosmos-3M is the rocket that has launched the most missions. However, Cosmos-3M is retired. Falcon 9 is the active rocket that has the highest number of missions. 
-
-The final graph is based on the machine learning model that was used to predict the number of missions over the next 25 years. This line graph shows how the number of missions progresses over the years. The blue line shows the Yhat values. This is the predicted number. The upper yellow line shows the upper Yhat, and the lower yellow line shows the lower Yhat. For example, in 2050, the model predicted 394.5 missions. And showed a predicted upper Yhat of 470, and a lower Yhat of 316.1. 
-
-The final link is for the dashboard that will showcase a combined image of all four visualizations. 
+- Tin
+- Avenika  
+- Melissa  
+- Anthony
 
 
