@@ -72,25 +72,6 @@ The Rocket Knowledge Assistant is a chatbot that answers questions about space m
 
 ---
 
-## 🗂 Project Structure
-
-```
-Project-4/
-├── FINAL_PROJECT/                 # Chatbot app, database, EDA, and visuals
-│   ├── app/                       # Flask app and routing logic
-│   ├── database/                  # SQLite DB with mission data
-│   ├── notebooks/                # Data prep and model logic
-│   └── reports/                  # Final presentation slides and Tableau links
-│
-├── Prophet_Space_Forecast/       # Time series forecasting component
-│   ├── notebooks/                # Forecasting with Prophet
-│   ├── data/                     # Historical and projected datasets
-│   └── outputs/                  # Forecast results
-```
-
-
----
-
 ## 👥 Team
 
 - Tin
